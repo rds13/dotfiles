@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Code
+export Projets=~/Projets
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -38,3 +38,13 @@ do
 done
 
 unset config_files
+
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
+
+ZSH_THEME=${ZSH_THEME:-"rds13"}
+source $ZSH/oh-my-zsh.sh
+
+source ~/.localrc
+
