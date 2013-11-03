@@ -43,7 +43,13 @@ unset config_files
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
-ZSH_THEME=${ZSH_THEME:-"rds13"}
+# Customize to your needs...
+export JAVA_MAIL_SERVER="smtp.free.fr"
+export PID_DIR=${HOME}/deveryflow
+export LOG_DIR=${HOME}/deveryflow
+
+#ZSH_THEME=${ZSH_THEME:-"rds13"}
+ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 source ~/.localrc
