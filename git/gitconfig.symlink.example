@@ -13,9 +13,9 @@
   last=log --name-status "HEAD^..HEAD"
   ll=log --graph --decorate --pretty=oneline --abbrev-commit
   co=checkout
-  promote = !$ZSH/bin/git-promote
-  wtf     = !$ZSH/bin/git-wtf
-  rank-contributers = !$ZSH/bin/git-rank-contributers
+  promote = !$DOTS/bin/git-promote
+  wtf     = !$DOTS/bin/git-wtf
+  rank-contributers = !$DOTS/bin/git-rank-contributers
   count   = !git shortlog -sn
 
 [color]

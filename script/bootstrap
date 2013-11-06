@@ -35,19 +35,25 @@ setup_gitconfig () {
     if [ "$(uname -s)" == "Darwin" ]
     then
       git_credential='osxkeychain'
+      if [ -n "$BOXEN_HOME" ]
+      then
+        git_credential='/opt/boxen/bin/boxen-git-credential'
+      fi
     fi
 
-    if [ -z "$AUTHORNAME" ] ; then
+    if [ -z "$AUTHORNAME" ]
+    then
       user ' - What is your github author name?'
       read -e git_authorname
     else
       git_authorname="$AUTHORNAME"
     fi
-    if [ -z "$AUTHOREMAIL" ] ; then
+    # Even if variable is empty we use it if it exists
+    if env | grep -q ^AUTHOREMAIL=
+      git_authoremail="$AUTHOREMAIL"
+    else
       user ' - What is your github author email?'
       read -e git_authoremail
-    else
-      git_authoremail="$AUTHOREMAIL"
     fi
 
     sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.symlink.example > git/gitconfig.symlink

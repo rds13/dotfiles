@@ -43,10 +43,6 @@ unset config_files
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
-# ALT + <- or ->
-bindkey "^[[1;9C" forward-word
-bindkey "^[[1;9D" backward-word
-
 # Customize to your needs...
 export JAVA_MAIL_SERVER="smtp.free.fr"
 export PID_DIR=${HOME}/deveryflow
@@ -57,7 +53,8 @@ export PATH=/System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Commands:
 export M2_HOME=/usr/share/maven
 #
 # Mac OS
-if [ `uname` = "Darwin" ] ; then
+if [ "$(uname -s)" == "Darwin" ]
+then
   export XML_CATALOG_FILES=/opt/boxen/homebrew/etc/xml/catalog
 fi
 # Gnu GPG vim
@@ -71,4 +68,3 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 source ~/.localrc
-
