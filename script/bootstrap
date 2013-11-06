@@ -50,6 +50,7 @@ setup_gitconfig () {
     fi
     # Even if variable is empty we use it if it exists
     if env | grep -q ^AUTHOREMAIL=
+    then
       git_authoremail="$AUTHOREMAIL"
     else
       user ' - What is your github author email?'
