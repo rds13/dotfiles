@@ -8,7 +8,6 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 fpath=($DOTS/functions $fpath)
-
 autoload -U $DOTS/functions/*(:t)
 
 HISTFILE=~/.zsh_history
