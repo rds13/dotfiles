@@ -72,6 +72,9 @@ Bundle 'tpope/vim-endwise'
 " Java
 Bundle 'mikelue/vim-maven-plugin'
 
+" Colorschemes for vim
+Bundle 'flazz/vim-colorschemes'
+
 " Fun, but not useful
 "Bundle 'altercation/vim-colors-solarized'
 "Bundle 'skammer/vim-css-color'
@@ -96,7 +99,9 @@ filetype plugin indent on     " required!
 
 " Configurations
 """"""""""""""""
-set background=dark
+set background=light
+colorscheme smyck
+
 
 " Wildmenu completion
 """""""""""""""""""""
@@ -123,8 +128,6 @@ au TabLeave * silent! :wa
 
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
-
-colorscheme solarized
 
 " Basic
 syntax enable
