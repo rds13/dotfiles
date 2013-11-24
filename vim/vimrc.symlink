@@ -99,7 +99,8 @@ filetype plugin indent on     " required!
 " Configurations
 """"""""""""""""
 set background=light
-colorscheme smyck
+" colorscheme smyck
+colorscheme habiLight
 
 " Wildmenu completion
 """""""""""""""""""""
