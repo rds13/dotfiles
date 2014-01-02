@@ -162,9 +162,9 @@ endif
 set list listchars=tab:»\ ,trail:·
 
 " Default Tabs & spaces
-set tabstop=4     " a tab is 4 spaces
+"set tabstop=4     " a tab is 4 spaces
 set shiftwidth=2  " number of spaces to use for autoindenting
-set softtabstop=2
+set softtabstop=4
 set expandtab
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab      " insert tabs on the start of a line according to
@@ -225,7 +225,7 @@ endfunction
 
 " Ruby Configurations
 """""""""""""""""""""
-autocmd filetype ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 colorcolumn=80
+autocmd filetype ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
 
 " PHP Configurations
 """"""""""""""""""""
@@ -254,7 +254,7 @@ au BufNewFile,BufReadPost *.js setlocal shiftwidth=2 expandtab
 
 " Puppet configurations
 """""""""""""""""""""""
-au FileType puppet setlocal noexpandtab
+au FileType puppet setlocal expandtab
 
 " Get jinja filetype selection working correctly for *.jinja.html files.
 au BufNewFile,BufReadPost *.jinja.html setlocal filetype=htmljinja
