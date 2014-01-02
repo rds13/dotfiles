@@ -52,6 +52,7 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'empanda/vim-varnish'
 Bundle 'itspriddle/vim-jquery'
 Bundle 'atourino/jinja.vim'
+Bundle 'godlygeek/tabular'
 
 " Python bundles
 Bundle 'nvie/vim-flake8'
@@ -161,9 +162,9 @@ endif
 set list listchars=tab:»\ ,trail:·
 
 " Default Tabs & spaces
-set tabstop=4     " a tab is four spaces
-set shiftwidth=4  " number of spaces to use for autoindenting
-set softtabstop=4
+set tabstop=4     " a tab is 4 spaces
+set shiftwidth=2  " number of spaces to use for autoindenting
+set softtabstop=2
 set expandtab
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab      " insert tabs on the start of a line according to
@@ -268,7 +269,7 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 " Custom mappings
 """"""""""""""""""
 
-" Genral
+" General
 noremap <silent> <F4> :QFix<CR>
 
 
