@@ -1,0 +1,2 @@
+#!/bin/sh
+echo $1 |  gawk -F: '{ print  strftime("%d/%m/%y %H:%M:%S",$1),$0 }' 
