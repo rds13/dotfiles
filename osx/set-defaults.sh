@@ -23,7 +23,7 @@ chflags nohidden ~/Library
 defaults write NSGlobalDomain KeyRepeat -int 1
 
 # Set a really short delay before key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 25
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
