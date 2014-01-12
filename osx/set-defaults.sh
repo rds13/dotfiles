@@ -20,13 +20,17 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 chflags nohidden ~/Library
 
 # Set a really fast key repeat.
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Set a really short delay before key repeat.
+defaults write NSGlobalDomain KeyRepeat -int 25
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 # Save screenshots to the desktop
+[ -d ~/Documents/screens ] || mkdir ~/Documents/screens
 defaults write com.apple.screencapture location -string "${HOME}/Documents/screens"
 
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
@@ -74,6 +78,8 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
+# Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
 
 ###############################################################################
 # Spotlight                                                                   #
@@ -85,3 +91,27 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # been indexed before.
 # Use `sudo mdutil -i off "/Volumes/foo"` to stop indexing any volume.
 sudo defaults write /.Spotlight-V100/VolumeConfiguration Exclusions -array "/Volumes"
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+###############################################################################
+# SSD-specific tweaks #
+###############################################################################
+
+# Disable local Time Machine snapshots
+#sudo tmutil disablelocal
+
+# Disable hibernation (speeds up entering sleep mode)
+#sudo pmset -a hibernatemode 0
+
+# Remove the sleep image file to save disk space
+#sudo rm /Private/var/vm/sleepimage
+# Create a zero-byte file instead…
+#sudo touch /Private/var/vm/sleepimage
+# …and make sure it can’t be rewritten
+#sudo chflags uchg /Private/var/vm/sleepimage
+
+# Disable the sudden motion sensor as it’s not useful for SSDs
+#sudo pmset -a sms 0
+
