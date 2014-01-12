@@ -6,7 +6,13 @@ fi
 # Mac OS
 if [ "$(uname -s)" = "Darwin" ]
 then
-  export XML_CATALOG_FILES=$(brew --prefix)/etc/xml/catalog
+  # asciidoc xml catalog
+  if [ -d /opt/boxen/ ]
+  then
+    export XML_CATALOG_FILES=/opt/boxen/homebrew/etc/xml/catalog
+  else
+    export XML_CATALOG_FILES=/etc/xml/catalog
+  fi
 fi
 # Gnu GPG vim
 export GPG_TTY=`tty`
