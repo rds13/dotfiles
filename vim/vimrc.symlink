@@ -37,6 +37,9 @@ Bundle 'paradigm/TextObjectify'
 Bundle 'scrooloose/nerdtree'
 Bundle 'jistr/vim-nerdtree-tabs'
 
+" GPG
+Bundle 'jamessan/vim-gnupg'
+
 " Syntaxes and such.
 Bundle 'tpope/vim-cucumber'
 Bundle 'leshill/vim-json'
