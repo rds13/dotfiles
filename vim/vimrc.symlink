@@ -57,6 +57,12 @@ Bundle 'itspriddle/vim-jquery'
 Bundle 'atourino/jinja.vim'
 Bundle 'godlygeek/tabular'
 
+" Snippets
+Bundle 'tomtom/tlib_vim'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+
 " Python bundles
 Bundle 'nvie/vim-flake8'
 Bundle 'fs111/pydoc.vim'
@@ -327,7 +333,7 @@ nmap ; :CtrlPBuffer<CR>
 "
 
 " SnipMate
-let g:snippets_dir = "~/.vim/bundle/snipmate-snippets"
+"let g:snippets_dir = "~/.vim/bundle/snipmate-snippets"
 
 " Sparkup
 let g:sparkupExecuteMapping = '<c-y>'
