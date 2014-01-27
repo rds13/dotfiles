@@ -15,7 +15,7 @@ then
   fi
 
   # Install homebrew packages
-  brew install grc coreutils spark gawk
+  brew install grc coreutils spark gawk maven30
 fi
 
 exit 0
