@@ -4,7 +4,7 @@
 if test ! $(which brew)
 then
   echo "  You should have homebrew install before installing ruby"
-  exit -1
+  exit
 fi
 
 if test ! $(which rbenv)
