@@ -2,7 +2,8 @@
 #
 # bootstrap installs things.
 
-DOTFILES_ROOT="`pwd`"
+cd "$(dirname $)"/..
+DOTFILES_ROOT="$(pwd)"
 
 set -e
 
@@ -135,6 +136,9 @@ install_dotfiles () {
   done
 }
 
+if [ ! -d git ] ;
+  fail "You should be launching script from 'dotfiles' dir"
+fi
 setup_gitconfig
 install_dotfiles
 
