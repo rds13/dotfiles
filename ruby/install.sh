@@ -1,5 +1,12 @@
 #!/bin/sh
 
+# Check for Homebrew
+if test ! $(which brew)
+then
+  echo "  You should have homebrew install before installing ruby"
+  exit -1
+fi
+
 if test ! $(which rbenv)
 then
   echo "  Installing rbenv for you."
