@@ -3,7 +3,7 @@
 # Check for Homebrew
 if test ! $(which brew)
 then
-  echo "  You should have homebrew install before installing ruby"
+  echo "  You should have homebrew installed before installing ruby."
   exit
 fi
 
