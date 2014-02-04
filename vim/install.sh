@@ -6,4 +6,4 @@
 [ -d ~/.vim/bundle/vundle ] || git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 [ -d ~/.vim/after ] || mkdir ~/.vim/after
 [ -d ~/.vim/after/plugin ] || mkdir ~/.vim/after/plugin
-cp tabular.vim ~/.vim/after/plugin
+cp vim/tabular.vim ~/.vim/after/plugin
