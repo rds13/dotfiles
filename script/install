@@ -4,7 +4,11 @@
 
 set -e
 
-cd "$(dirname $)"/..
+cd "$(dirname $)"
+
+if [ ! -d git ] ;
+  fail "You should be launching script from 'dotfiles' dir with ./script/bootstrap"
+fi
 
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
