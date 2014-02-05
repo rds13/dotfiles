@@ -137,6 +137,7 @@ install_dotfiles () {
 }
 
 if [ ! -d git ] ;
+then
   fail "You should be launching script from 'dotfiles' dir with ./script/bootstrap"
 fi
 setup_gitconfig
