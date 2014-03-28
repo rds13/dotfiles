@@ -1,6 +1,7 @@
 " From https://github.com/jperras/vim-dotfiles
 "
 set encoding=utf-8
+set fileencodings=utf-8,latin1
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -234,7 +235,7 @@ endfunction
 
 " Ruby Configurations
 """""""""""""""""""""
-autocmd filetype ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2 colorcolumn=80
 
 " PHP Configurations
 """"""""""""""""""""
@@ -264,6 +265,11 @@ au BufNewFile,BufReadPost *.js setlocal shiftwidth=2 expandtab
 " Puppet configurations
 """""""""""""""""""""""
 au FileType puppet setlocal expandtab
+
+" Erlang configurations
+"""""""""""""""""""""""
+autocmd FileType erlang setlocal tabstop=8 shiftwidth=4 softtabstop=4 expandtab
+autocmd FileType erlang setlocal colorcolumn=80
 
 " Get jinja filetype selection working correctly for *.jinja.html files.
 au BufNewFile,BufReadPost *.jinja.html setlocal filetype=htmljinja
