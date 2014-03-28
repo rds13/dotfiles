@@ -14,7 +14,7 @@ fail () {
 
 if [ ! -d git ] ;
 then
-  fail "You should be launching script from 'dotfiles' dir with ./script/bootstrap"
+  fail "You should be launching script from 'dotfiles' dir with ./script/install"
 fi
 
 # find the installers and run them iteratively
