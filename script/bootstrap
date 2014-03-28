@@ -4,7 +4,6 @@
 
 cd "$(dirname $)"
 DOTFILES_ROOT="$(pwd)"
-
 set -e
 
 echo ''
@@ -76,7 +75,7 @@ install_dotfiles () {
   backup_all=false
   skip_all=false
 
-  for source in `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
+  for source in "$(pwd)" `find $DOTFILES_ROOT -maxdepth 2 -name \*.symlink`
   do
     dest="$HOME/.`basename \"${source%.*}\"`"
 
@@ -142,18 +141,6 @@ then
 fi
 setup_gitconfig
 install_dotfiles
-
-# If we're on a Mac, let's install and setup homebrew.
-#if [ "$(uname -s)" == "Darwin" ]
-#then
-#  info "installing dependencies"
-#  if . bin/dot > /tmp/dotfiles-dot 2>&1
-#  then
-#    success "dependencies installed"
-#  else
-#    fail "error installing dependencies"
-#  fi
-#fi
 
 echo ''
 echo '  All installed!'
