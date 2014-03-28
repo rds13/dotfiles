@@ -3,7 +3,7 @@
 set encoding=utf-8
 set fileencodings=utf-8,latin1
 set nocompatible               " be iMproved
-filetype off                   " required!
+filetype off                   " required! (ensure package vim-gui-common is installed on linux)
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
