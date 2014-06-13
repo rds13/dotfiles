@@ -6,7 +6,7 @@
 cd "$(dirname $)"
 set -e
 
-if [ ! -d ~/.oh-my-zsh ] ;
+if [ ! -d ~/.oh-my-zsh ]
 then
   # install oh-my-zsh in same dir that dotfiles
   cd ..
