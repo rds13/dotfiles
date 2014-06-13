@@ -7,4 +7,4 @@
 [ -d ~/.vim/after ] || mkdir ~/.vim/after
 [ -d ~/.vim/after/plugin ] || mkdir ~/.vim/after/plugin
 cp vim/tabular.vim ~/.vim/after/plugin
-vi +BundleInstall +qall
+vim --noplugin -N \"+set hidden\" \"+syntax on\" +BundleClean +BundleInstall +qall
