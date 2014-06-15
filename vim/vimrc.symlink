@@ -1,8 +1,11 @@
 " From https://github.com/jperras/vim-dotfiles
 "
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
 set encoding=utf-8
 set fileencodings=utf-8,latin1
-set nocompatible               " be iMproved
 filetype off                   " required! (ensure package vim-gui-common is installed on linux)
 
 " TODO: this may not be in the correct place. It is intended to allow
@@ -98,8 +101,9 @@ set copyindent    " copy the previous indentation on autoindenting
 
 " General Code Folding
 """"""""""""""""""""""
-set foldmethod=indent
+set foldmethod=indent  "fold based on indent
 set foldlevel=99
+set nofoldenable       "don't fold by default
 
 " Highlight VCS conflict markers
 """"""""""""""""""""""""""""""""
