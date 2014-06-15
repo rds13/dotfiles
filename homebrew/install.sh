@@ -9,7 +9,7 @@ cd "$(dirname $)"
 if [ "$(uname -s)" = "Darwin" ]
 then
   # Don't try to install homebrew if boxen is doing the same
-  if ! [ -f "../boxen/install.sh" ]
+  if ! [ -f "boxen/install.sh" ]
   then
     # Check for Homebrew
     if [ ! $(which brew >/dev/null 2>&1) ]
