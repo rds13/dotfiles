@@ -1,9 +1,9 @@
 
 [user]
-        name = AUTHORNAME
-        email = AUTHOREMAIL
+  name = AUTHORNAME
+  email = AUTHOREMAIL
 [credential]
-        helper = GIT_CREDENTIAL_HELPER
+  helper = GIT_CREDENTIAL_HELPER
 
 [core]
   editor=vim
@@ -15,7 +15,7 @@
   co=checkout
   promote = !$DOTS/bin/git-promote
   wtf     = !$DOTS/bin/git-wtf
-  rank-contributers = !$DOTS/bin/git-rank-contributers
+  rank-contributors = !$DOTS/bin/git-rank-contributors
   count   = !git shortlog -sn
 
 [color]
