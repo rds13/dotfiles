@@ -42,8 +42,7 @@ check_sshconfig () {
   fi
   if [ "$proceed" != "true" ]
   then
-    info "Stoping bootstrap installation."
-    exit
+    fail "Stoping bootstrap installation."
   fi
 }
 
