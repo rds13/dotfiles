@@ -26,6 +26,27 @@ fail () {
   exit
 }
 
+check_sshconfig () {
+  if ! [ -d ~/.ssh ] || ( [ -d ~/.ssh ] && ! [ -f ~/.ssh/id_rsa ] && ! [ -f ~/.ssh/id_dsa ] )
+  then
+    user "You probably would like to install your SSH keys before proceeding. Do you want to proceed anyway [Y|N] ?"
+    read -n 1 action
+    case "$action" in
+      y )
+        proceed=true;;
+      Y )
+        proceed=true;;
+      * )
+        ;;
+    esac
+  fi
+  if [ "$proceed" != "true" ]
+  then
+    info "Stoping bootstrap installation."
+    exit
+  fi
+}
+
 setup_gitconfig () {
   if ! [ -f git/gitconfig.symlink ]
   then
@@ -139,6 +160,7 @@ if [ ! -d git ] ;
 then
   fail "You should be launching script from 'dotfiles' dir with ./script/bootstrap"
 fi
+check_sshconfig
 setup_gitconfig
 install_dotfiles
 
