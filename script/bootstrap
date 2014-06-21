@@ -27,8 +27,10 @@ fail () {
 }
 
 check_sshconfig () {
+  proceed=true
   if ! [ -d ~/.ssh ] || ( [ -d ~/.ssh ] && ! [ -f ~/.ssh/id_rsa ] && ! [ -f ~/.ssh/id_dsa ] )
   then
+    proceed=false
     user "You probably would like to install your SSH keys before proceeding. Do you want to proceed anyway [Y|N] ?"
     read -n 1 action
     case "$action" in
