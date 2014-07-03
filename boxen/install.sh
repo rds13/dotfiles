@@ -1,6 +1,9 @@
 #!/bin/bash
 
-if ! [ -d /opt/boxen ] && [ "$(uname -s)" == "Darwin" ]
+# OSX-only stuff. Abort if not OSX.
+[[ "$OSTYPE" =~ ^darwin ]] || return 1
+
+if ! [ -d /opt/boxen ]
 then
   echo "I need sudo for /opt/boxen installation"
   sudo mkdir -p /opt/boxen
