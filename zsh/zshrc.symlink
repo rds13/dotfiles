@@ -11,6 +11,11 @@ then
   source "${HOME}/.localrc"
 fi
 
+if [[ -a "${HOME}/.openstackrc" ]]
+then
+  source "${HOME}/.openstackrc"
+fi
+
 # all of our zsh files
 typeset -U config_files
 config_files=($DOTS/**/*.zsh)
