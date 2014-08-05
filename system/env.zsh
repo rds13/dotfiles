@@ -16,7 +16,6 @@ then
   else
     export XML_CATALOG_FILES=/etc/xml/catalog
   fi
-  export JAVA_HOME=`/usr/libexec/java_home`
 fi
 
 # Gnu GPG vim
