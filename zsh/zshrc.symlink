@@ -1,5 +1,7 @@
 # shortcut to this dotfiles path is $DOTS
 export DOTS="${HOME}/.dotfiles"
+# shortcut to this secfiles path is $SECS
+export SECS="${HOME}/.secfiles"
 
 # your project folder that we can `c [tab]` to
 export PROJETS="${HOME}/Projets"
