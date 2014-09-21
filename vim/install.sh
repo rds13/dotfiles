@@ -10,3 +10,4 @@ BASE="$(pwd)"
 cp vim/tabular.vim ~/.vim/after/plugin
 ln -s "${BASE}/vim/vundles.vim" ~/.vim/vundles.vim
 vim -u ~/.vim/vundles.vim --noplugin -N "+set hidden" "+syntax on" +BundleClean +BundleInstall +qall
+exit 0
