@@ -71,6 +71,9 @@ Bundle 'jmcantrell/vim-virtualenv'
 Bundle "vim-ruby/vim-ruby"
 Bundle 'tpope/vim-endwise'
 
+" Erlang specific
+Bundle "jimenezrick/vimerl"
+
 " Clojure
 "Bundle 'guns/vim-clojure-static'
 "Bundle 'tpope/vim-foreplay'
