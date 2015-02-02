@@ -82,9 +82,6 @@ Bundle "jimenezrick/vimerl"
 " Java
 Bundle 'mikelue/vim-maven-plugin'
 
-" Erlang
-Bundle 'jimenezrick/vimerl'
-
 " Colorschemes for vim
 Bundle 'flazz/vim-colorschemes'
 
