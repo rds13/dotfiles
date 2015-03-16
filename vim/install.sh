@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Install vim dependencies : vundle
 BASE="$(pwd)"
