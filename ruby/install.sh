@@ -1,4 +1,8 @@
 #!/bin/bash
+# Install script for ruby via homebrew
+
+# OSX-only stuff. Abort if not OSX.
+[[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
 # Check for Homebrew
 if test ! $(which brew)
