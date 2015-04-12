@@ -5,7 +5,7 @@ if [[ "$EDITOR" == "" ]] ; then
 fi
 
 # Mac OS
-if [ "$(uname -s)" = "Darwin" ]
+if [[ "$(uname -s)" == "Darwin" ]]
 then
   # asciidoc xml catalog
   if [ -d /opt/boxen/ ]
