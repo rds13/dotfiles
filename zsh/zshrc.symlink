@@ -8,6 +8,7 @@ ZSH_THEME=${ZSH_THEME:-"rds13"}
   ZSH_CUSTOM=${ZSH_CUSTOM:-"${HOME}/.dotfiles/oh-my-zsh"}
 
 #plugins=(gpg-agent)
+plugins=(git git-prompt)
 source "$ZSH/oh-my-zsh.sh"
 
 DELTA=$(expr $(date +%s) - $START_TIME)
