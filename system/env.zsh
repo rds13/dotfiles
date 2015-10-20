@@ -5,7 +5,7 @@ if [[ "$EDITOR" == "" ]] ; then
 fi
 
 # Mac OS
-if [[ "$(uname -s)" == "Darwin" ]]
+if [[ "$OSTYPE" =~ ^darwin ]]
 then
   # To look for local package BEFORE system packages
   export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH

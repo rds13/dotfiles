@@ -1,6 +1,6 @@
 alias reload!='. ~/.zshrc'
 
-if [[ "$(uname -s)" == "Darwin" ]]
+if [[ "$OSTYPE" =~ ^darwin ]]
 then
   # http://hints.macworld.com/comment.php?mode=view&cid=131169
   # See how long a given process has been running
