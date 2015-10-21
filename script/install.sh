@@ -12,4 +12,4 @@
 [[ ! -d ~/src ]] && mkdir ~/src
 cd ~/src
 [[ ! -d dotfiles ]] && git clone https://github.com/rds13/dotfiles
-cd dotfiles && ./script/local_install
+cd dotfiles && source ./script/local_install
