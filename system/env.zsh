@@ -27,9 +27,6 @@ then
   fi
 fi
 
-# Gnu GPG vim
-export GPG_TTY=`tty`
-
 export JAVA_MAIL_SERVER="smtp.free.fr"
 export PID_DIR=${HOME}/deveryflow
 export LOG_DIR=${HOME}/deveryflow
