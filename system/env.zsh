@@ -1,7 +1,13 @@
 # Only set this if we haven't set $EDITOR up somewhere else previously.
-if [[ "$EDITOR" == "" ]] ; then
-  # Use sublime for my editor.
-  export EDITOR='vim'
+if [[ "$EDITOR" == "" ]]
+then
+  # Use vim for my editor.
+  if test $(which vim)
+  then
+    export EDITOR='vim'
+  else
+    export EDITOR='vi'
+  fi
 fi
 
 # Mac OS
