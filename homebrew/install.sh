@@ -21,6 +21,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark gawk maven30 gpg2 asciidoc graphviz boot2docker
+brew install grc coreutils spark gawk maven30 gnupg gpg-agent asciidoc graphviz
 
 exit 0
