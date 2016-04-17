@@ -21,6 +21,6 @@ then
 fi
 
 # Install homebrew packages
-brew install grc coreutils spark gawk maven30 gnupg gpg-agent asciidoc graphviz
+brew install grc coreutils spark gawk maven30 gnupg gnupg2 gpg-agent asciidoc graphviz
 
 exit 0
