@@ -5,8 +5,7 @@ then
   export GPG_AGENT_INFO
   export SSH_AUTH_SOCK
 else
-  $(which gpg-agent >/dev/null)
-  if [ $? -eq 0 ]
+  if command -v gpg-agent >/dev/null;
   then
     eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
   fi
