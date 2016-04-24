@@ -25,8 +25,18 @@ then
   fi
 
 else
-  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  if [[ -d ~/.rbenv ]]
+  then
+    cd ~/.rbenv && git pull --rebase origin master
+  else
+    git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+  fi
+  if [[ -d ~/.rbenv/plugins/ruby-build ]]
+  then
+    cd ~/.rbenv/plugins/ruby-build && git pull --rebase origin master
+  else
+    git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  fi
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
   rbenv rehash 2>/dev/null
