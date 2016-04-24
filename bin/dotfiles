@@ -5,18 +5,23 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
+cd "$DOTS"
+
+git pull --rebase --stat origin master
+
 # OSX-only stuff. Abort if not OSX.
-[[ "$OSTYPE" =~ ^darwin ]] || exit 0
-
-# Set OS X defaults
-$DOTS/osx/set-defaults.sh
-
-# Check for Homebrew
-if command -v brew >/dev/null;
+if [[ "$OSTYPE" =~ ^darwin ]]
 then
-  # Upgrade homebrew
-  brew update
+  # Set OS X defaults
+  $DOTS/osx/set-defaults.sh
+
+  # Check for Homebrew
+  if command -v brew >/dev/null;
+  then
+    # Upgrade homebrew
+    brew update
+  fi
 fi
 
-# Install homebrew packages
-$DOTS/homebrew/install.sh 2>&1
+# Install all modules
+$DOTS/script/repeatable_install.sh 2>&1
