@@ -24,4 +24,4 @@ then
 fi
 
 # Install all modules
-$DOTS/script/repeatable_install.sh 2>&1
+$DOTS/script/repeatable_install 2>&1
