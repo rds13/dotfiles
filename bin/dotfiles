@@ -12,7 +12,7 @@
 $DOTS/osx/set-defaults.sh
 
 # Check for Homebrew
-if test $(which brew)
+if command -v brew >/dev/null;
 then
   # Upgrade homebrew
   brew update

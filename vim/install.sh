@@ -2,7 +2,7 @@
 #
 # Install vim dependencies : vundle
 
-if test $(which vim)
+if  command -v vim >/dev/null
 then
   BASE="$(pwd)"
   [ -d ~/.vim ] || mkdir ~/.vim
