@@ -1,8 +1,8 @@
 # Only set this if we haven't set $EDITOR up somewhere else previously.
 if [[ "$EDITOR" == "" ]]
 then
-  # Use vim for my editor.
-  if test $(which vim)
+  # Use vim for my editor if available
+  if  command -v vim >/dev/null
   then
     export EDITOR='vim'
   else
