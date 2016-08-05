@@ -1,13 +1,14 @@
 #
-if [ -f "${HOME}/.gpg-agent-info" ]
+envfile="${HOME}/.gpg-agent-info"
+if [ -f "${envfile}" ] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null
 then
-  . "${HOME}/.gpg-agent-info"
+  . "${envfile}"
   export GPG_AGENT_INFO
   export SSH_AUTH_SOCK
 else
   if command -v gpg-agent >/dev/null;
   then
-    eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
+    eval $(gpg-agent --daemon --write-env-file "${envfile}")
   fi
 fi
 
