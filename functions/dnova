@@ -5,7 +5,7 @@ dnova() {
   name="$1"
   source ~/src/secfiles/openstack/$name-openrc.sh
   shift
-  docker run -it -v $HOME/src:/root/src \
+  docker run -it \
     $(env | grep "^OS_" | cut -d= -f1 | awk '{print "-e", $1}') \
     oscli "$@"
   )
