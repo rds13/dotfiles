@@ -1,9 +1,27 @@
 
 dnova() {
+  if [ $# -lt 2 ]
+  then
+    echo "dnova <openstack rc file> <openstack cli command>"
+    echo $#
+    return -1
+  fi
   # subshell to not polute env
   (
   name="$1"
-  source ~/src/secfiles/openstack/$name-openrc.sh
+  rcfile="${HOME}/src/secfiles/openstack/$name-openrc.sh"
+  if [ -r "$name" ]
+  then
+    source "$name"
+  else
+    if [ -r "$rcfile" ]
+    then
+      source "$rcfile"
+    else
+      echo "Unable to find ressource file $name."
+      return -1
+    fi
+  fi
   shift
   docker run -it \
     $(env | grep "^OS_" | cut -d= -f1 | awk '{print "-e", $1}') \
