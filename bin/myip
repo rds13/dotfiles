@@ -1,0 +1,2 @@
+#!/bin/sh
+curl -s monip.org | iconv -f iso-8859-1 | sed -n 's/.*IP : \([0-9.]*\).*/\1/p'

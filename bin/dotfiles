@@ -1,22 +1,27 @@
-#!/bin/sh
+#!/bin/bash
 #
 # dot
 #
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
-if [ "$(uname -s)" == "Darwin" ]
+cd "$DOTS"
+
+git pull --rebase --stat origin master
+
+# OSX-only stuff. Abort if not OSX.
+if [[ "$OSTYPE" =~ ^darwin ]]
 then
   # Set OS X defaults
   $DOTS/osx/set-defaults.sh
 
   # Check for Homebrew
-  if test $(which brew)
+  if command -v brew >/dev/null;
   then
     # Upgrade homebrew
     brew update
   fi
-
-  # Install homebrew packages
-  $DOTS/homebrew/install.sh 2>&1
 fi
+
+# Install all modules
+$DOTS/script/repeatable_install 2>&1

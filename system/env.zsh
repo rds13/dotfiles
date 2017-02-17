@@ -1,12 +1,21 @@
 # Only set this if we haven't set $EDITOR up somewhere else previously.
-if [[ "$EDITOR" == "" ]] ; then
-  # Use sublime for my editor.
-  export EDITOR='vim'
+if [[ "$EDITOR" == "" ]]
+then
+  # Use vim for my editor if available
+  if  command -v vim >/dev/null
+  then
+    export EDITOR='vim'
+  else
+    export EDITOR='vi'
+  fi
 fi
 
 # Mac OS
-if [ "$(uname -s)" = "Darwin" ]
+if [[ "$OSTYPE" =~ ^darwin ]]
 then
+  # To look for local package BEFORE system packages
+  export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
+
   # asciidoc xml catalog
   if [ -d /opt/boxen/ ]
   then
@@ -17,9 +26,6 @@ then
     export XML_CATALOG_FILES=/etc/xml/catalog
   fi
 fi
-
-# Gnu GPG vim
-export GPG_TTY=`tty`
 
 export JAVA_MAIL_SERVER="smtp.free.fr"
 export PID_DIR=${HOME}/deveryflow
