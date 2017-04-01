@@ -20,7 +20,11 @@ then
   fi
 fi
 
-# Install homebrew packages
-brew install grc coreutils spark gawk maven30 gnupg gnupg2 gpg-agent asciidoc graphviz
+# Check for Homebrew
+if command -v brew >/dev/null;
+then
+  # Install homebrew packages
+  brew install grc coreutils spark gawk maven30 gnupg gnupg2 gpg-agent asciidoc graphviz
+fi
 
 exit 0
