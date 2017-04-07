@@ -6,7 +6,7 @@
 
 BOXEN_HOME=${BOXEN_HOME:-/opt/boxen}
 echo "I need sudo for boxen installation at /opt/boxen"
-[[ -d ""$BOXEN_HOME" ]] || sudo mkdir -p ""$BOXEN_HOME"
+[[ -d "$BOXEN_HOME" ]] || sudo mkdir -p "$BOXEN_HOME"
 sudo chown ${USER}:staff "$BOXEN_HOME"
 echo "I will need your github credential to access our-boxen repo from Deveryware"
 git clone git@github.com:Deveryware/our-boxen.git "$BOXEN_HOME/repo"
