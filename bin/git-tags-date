@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# List tags with date.
+#
+# Examples
+#
+#   git-tags-date
+#
+git log --tags --simplify-by-decoration --pretty="format:%ai %d"
