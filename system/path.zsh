@@ -11,3 +11,7 @@ fi
 if [ -d "/opt/boxen/homebrew/opt/gpg-agent/bin" ] ; then
   export PATH="/opt/boxen/homebrew/opt/gpg-agent/bin:$PATH"
 fi
+# See https://docs.brew.sh/Homebrew-and-Python.html
+if [ -d "/opt/boxen/homebrew/opt/python/libexec/bin" ] ; then
+  export PATH="/opt/boxen/homebrew/opt/python/libexec/bin:$PATH"
+fi
