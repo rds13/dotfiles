@@ -57,10 +57,6 @@ setup_gitconfig () {
     if [[ "$OSTYPE" =~ ^darwin ]]
     then
       git_credential='osxkeychain'
-      if [ -n "$BOXEN_HOME" ]
-      then
-        git_credential='/opt/boxen/bin/boxen-git-credential'
-      fi
     fi
 
     if [ -z "$AUTHORNAME" ]
