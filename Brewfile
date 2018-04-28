@@ -1,6 +1,10 @@
+cask_args appdir: '/Applications'
+
 tap "homebrew/core"
 tap "caskroom/cask"
-cask "java"
+
+brew "coreutils"
+brew "grc"
 brew "grc"
 brew "spark"
 brew "gawk"
@@ -9,3 +13,8 @@ brew "asciidoc"
 brew "jq"
 brew "rbenv"
 brew "ruby-build"
+
+cask "java"
+cask "adium"
+cask "firefox"
+cask "thunderbird"
