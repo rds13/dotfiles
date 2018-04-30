@@ -13,6 +13,7 @@ brew "asciidoc"
 brew "jq"
 brew "rbenv"
 brew "ruby-build"
+brew "dnsmasq"
 
 cask "java"
 cask "adium"
