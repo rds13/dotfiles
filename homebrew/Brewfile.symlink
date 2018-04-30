@@ -20,4 +20,6 @@ cask "firefox"
 cask "thunderbird"
 cask "openoffice"
 cask "tunnelblick"
+cask "virtualbox"
+
 mas "Telephone", id: 406825478
