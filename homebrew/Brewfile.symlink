@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap "homebrew/core"
 tap "caskroom/cask"
+tap "caskroom/fonts"
 
 brew "coreutils"
 brew "grc"
@@ -25,6 +26,7 @@ cask "virtualbox"
 cask "iterm2"
 cask "alfred"
 cask "cyberduck"
+cask "xquartz"
 cask "inkscape"
 cask "mumble"
 cask "bitbar"
