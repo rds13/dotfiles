@@ -21,5 +21,11 @@ cask "thunderbird"
 cask "openoffice"
 cask "tunnelblick"
 cask "virtualbox"
+cask "iterm2"
+cask "alfred"
+cask "cyberduck"
+cask "inkscape"
+cask "mumble"
+cask "bitbar"
 
 mas "Telephone", id: 406825478
