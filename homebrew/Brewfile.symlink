@@ -19,3 +19,5 @@ cask "adium"
 cask "firefox"
 cask "thunderbird"
 cask "openoffice"
+cask "tunnelblick"
+mas "Telephone", id: 406825478
