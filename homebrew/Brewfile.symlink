@@ -27,5 +27,6 @@ cask "cyberduck"
 cask "inkscape"
 cask "mumble"
 cask "bitbar"
+cask "font-source-code-pro"
 
 mas "Telephone", id: 406825478
