@@ -6,5 +6,6 @@ then
   alias ls="gls -F --color"
   alias l="gls -lAh --color"
   alias ll="gls -l --color"
-  alias la='gls -A --color'
+  alias la="gls -A --color"
+  alias sshvm="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
 fi
