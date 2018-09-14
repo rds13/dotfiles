@@ -17,17 +17,6 @@ then
 #  export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
 
   # asciidoc xml catalog
-  if [ -d /opt/boxen/ ]
-  then
-    export XML_CATALOG_FILES=/opt/boxen/homebrew/etc/xml/catalog
-    export GRAPHVIZ_DOT=/opt/boxen/homebrew/bin/dot
-    #export M2_HOME=`brew --prefix maven30`/libexec
-  else
-    export XML_CATALOG_FILES=/etc/xml/catalog
-  fi
+  export XML_CATALOG_FILES=/etc/xml/catalog
 fi
-
-export JAVA_MAIL_SERVER="smtp.free.fr"
-export PID_DIR=${HOME}/deveryflow
-export LOG_DIR=${HOME}/deveryflow
 #
