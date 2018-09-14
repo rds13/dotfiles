@@ -9,22 +9,18 @@
 [[ "$OSTYPE" =~ ^darwin ]] || exit 0
 
 cd "$(dirname $)"
-# Don't try to install homebrew if boxen is doing the same
-if ! [ -f "boxen/install.sh" ]
+# Check for Homebrew
+if [ ! $(which brew >/dev/null 2>&1) ]
 then
-  # Check for Homebrew
-  if [ ! $(which brew >/dev/null 2>&1) ]
-  then
-    echo "  Installing Homebrew for you."
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)" > /tmp/homebrew-install.log
-  fi
+  echo "  Installing Homebrew for you."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 # Check for Homebrew
 if command -v brew >/dev/null;
 then
   # Install homebrew packages
-  brew install grc coreutils spark gawk maven30 gnupg gnupg2 gpg-agent asciidoc graphviz
+  brew install grc coreutils spark gawk gnupg2 asciidoc
 fi
 
 exit 0

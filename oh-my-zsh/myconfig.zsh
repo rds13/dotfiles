@@ -11,8 +11,6 @@ export SECS="${HOME}/.secfiles"
 # your project folder that we can `c [tab]` to
 export PROJETS="${HOME}/Projets"
 
-[[ -a /opt/boxen/env.sh ]] && source /opt/boxen/env.sh
-
 # all of our zsh files
 typeset -U config_files
 config_files=($DOTS/**/*.zsh)
