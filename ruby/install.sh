@@ -37,6 +37,9 @@ else
   else
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
   fi
+fi
+
+if [[ -d ~/.rbenv ]]
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
   rbenv rehash 2>/dev/null
