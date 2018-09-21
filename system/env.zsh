@@ -16,7 +16,14 @@ then
   # To look for local package BEFORE system packages
 #  export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
 
-  # asciidoc xml catalog
-  export XML_CATALOG_FILES=/etc/xml/catalog
+  if [[ -f /etc/xml/catalog ]]
+  then
+    # asciidoc xml catalog
+    export XML_CATALOG_FILES=/etc/xml/catalog
+  fi
+  if [[ -f /usr/local/etc/xml/catalog ]]
+  then
+    export XML_CATALOG_FILES=/usr/local/etc/xml/catalog
+  fi
 fi
 #
