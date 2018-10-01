@@ -18,4 +18,7 @@ if command -v brew >/dev/null ; then
   if [ -d "${HB}/opt/python/libexec/bin" ] ; then
     export PATH="${HB}/opt/python/libexec/bin:$PATH"
   fi
+  if [ -d "${HB}/opt/mysql@5.7/bin" ] ; then
+    export PATH="${HB}/opt/mysql@5.7/bin:$PATH"
+  fi
 fi
