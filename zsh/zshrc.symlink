@@ -1,11 +1,13 @@
-
+# Symlink to your home ~/.zshrc
+#
 START_TIME=$(date +%s)
 export ZSH="${HOME}/.oh-my-zsh"
 
-ZSH_THEME=${ZSH_THEME:-"rds13"}
-
 [[ -d "${HOME}/.dotfiles" ]] &&
   ZSH_CUSTOM=${ZSH_CUSTOM:-"${HOME}/.dotfiles/oh-my-zsh"}
+
+[[ -f "$ZSH_CUSTOM/themes/rds13.zsh-theme" ]] &&
+  ZSH_THEME=${ZSH_THEME:-"rds13"}
 
 plugins=(git git-prompt)
 source "$ZSH/oh-my-zsh.sh"
