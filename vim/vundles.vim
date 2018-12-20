@@ -72,7 +72,8 @@ Bundle "vim-ruby/vim-ruby"
 Bundle 'tpope/vim-endwise'
 
 " Erlang specific
-Bundle "jimenezrick/vimerl"
+Bundle 'vim-erlang/vim-erlang-runtime'
+Bundle 'vim-erlang/vim-erlang-compiler'
 
 " Clojure
 "Bundle 'guns/vim-clojure-static'
